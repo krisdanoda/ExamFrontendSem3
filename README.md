@@ -1,2 +1,1 @@
-# ExamSem3
- Kristofer Noda Pedersen
+# CA2-frontend
