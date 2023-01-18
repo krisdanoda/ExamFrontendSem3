@@ -3,3 +3,12 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+span {
+    width: 10rem;
+    justify-content: center
+
+}
+
+.basicPadding{
+padding: 2rem
+}

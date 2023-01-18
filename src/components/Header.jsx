@@ -12,10 +12,10 @@ function Header({setErrorMsg, loggedIn, setLoggedIn}) {
     return (
         <nav className="topnav">
             <NavLink className="active" to="/"><i className="fa fa-fw fa-home"></i> Home</NavLink>
-            <NavLink to="/search"><i className="fa fa-fw fa-search"></i> Search</NavLink>
-            <NavLink to="/contact"><i className="fa fa-fw fa-envelope"></i> Contact</NavLink>
-
-
+            <NavLink to="/show"><i className="fa fa-fw fa-music"></i> Shows</NavLink>
+            <NavLink to="/adminpage"><i className="fa fa-fw fa-plus-square-o"></i> Create Page</NavLink>
+            <NavLink to="/adminshows"><i className="fa fa-fw fa-minus-square-o"></i> Admin Shows</NavLink>
+            <NavLink to="/adminpageupdate"><i className="fa fa-fw fa-envelope"></i> Update page</NavLink>
             {loggedIn && apiFacade.decodeJwt().roles === "owner"?
                 <NavLink to="/owners"><i className="fa fa-fw fa-envelope"></i> owners</NavLink>
                 : <></>
@@ -24,6 +24,7 @@ function Header({setErrorMsg, loggedIn, setLoggedIn}) {
                 <NavLink to="/boats"><i className="fa fa-fw fa-envelope"></i> Boats</NavLink>
                 : <></>
             }
+
 
             {!loggedIn ? (<Login setLoggedIn={setLoggedIn} setErrorMsg={setErrorMsg}  />) :
                 (<div>

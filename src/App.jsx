@@ -5,7 +5,10 @@ import Search from "./pages/Search.jsx";
 import Contact from "./pages/Contact.jsx";
 import Header from "./components/Header.jsx";
 import Owners from "./pages/Owners.jsx";
-import Boats from "./pages/Boats.jsx";
+import Shows from "./pages/Shows.jsx";
+import AdminPage from "./pages/AdminPage.jsx";
+import AdminSHows from "./components/AllShowsAdmin.jsx";
+import AdminPage2 from "./pages/AdminPage2.jsx";
 
 function App(props) {
 
@@ -23,10 +26,10 @@ function App(props) {
             <Header setLoggedIn={setLoggedIn} loggedIn={loggedIn}/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="search" element={<Search/>}/>
-                <Route path="contact" element={<Contact address={obj}/>}/>
-                <Route path="owners" element={<Owners></Owners>}></Route>
-                <Route path="boats" element={<Boats></Boats>}></Route>
+                <Route path="show" element={<Shows></Shows>}></Route>
+                <Route path="adminpage" element={<AdminPage></AdminPage>}></Route>
+                <Route path="adminshows" element={<AdminSHows></AdminSHows>}></Route>
+                <Route path="adminpageupdate" element={<AdminPage2></AdminPage2>}></Route>
                 <Route path="*" element={<h1>Page Not Found !!!!</h1>}/>
             </Routes>
         </>
