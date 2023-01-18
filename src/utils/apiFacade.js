@@ -1,13 +1,13 @@
-const URL = "http://localhost:8080";
-
 function handleHttpErrors(res) {
+
     if (!res.ok) {
         return Promise.reject({status: res.status, fullError: res.json()})
     }
     return res.json();
 }
-
 function apiFacade() {
+
+    const URL = "https://kurisu-da-noda.com/backendexam/";
 
     const setToken = (token) => {
         localStorage.setItem('jwtToken', token)
@@ -76,7 +76,8 @@ function apiFacade() {
         login,
         logout,
         fetchData,
-        decodeJwt
+        decodeJwt,
+        URL
     }
 }
 

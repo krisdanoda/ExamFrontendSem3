@@ -5,8 +5,11 @@ function Home(props) {
 
     return (
         <div>
-            <h3>Homepage1</h3>
-            <button onClick={()=>console.log(apiFacade.decodeJwt())}> HI </button>
+            <h3>Homepage</h3>
+            This is the exam project for Kristofer Noda Pedersen.
+
+            Please login to see features
+
 
         </div>
     );

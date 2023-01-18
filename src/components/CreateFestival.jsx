@@ -6,7 +6,6 @@ function CreateFestival(props) {
 
     const onChange = (evt) => {
         setFestival({...festival, [evt.target.id]: evt.target.value})
-        console.log(festival)
 
     }
 
@@ -54,6 +53,9 @@ function CreateFestival(props) {
                 <input type="text" id="duration" className="form-control" aria-label="Name"
                        onChange={onChange}
                        aria-describedby="basic-addon1"/>
+                <div className="input-group-append">
+                    <span className="input-group-text" id="basic-addon1">Days</span>
+                </div>
             </div>
 
             <button onClick={submit} class="btn btn-primary"> Submit </button>

@@ -4,7 +4,6 @@ import Home from "./pages/Home.jsx";
 import Search from "./pages/Search.jsx";
 import Contact from "./pages/Contact.jsx";
 import Header from "./components/Header.jsx";
-import Owners from "./pages/Owners.jsx";
 import Shows from "./pages/Shows.jsx";
 import AdminPage from "./pages/AdminPage.jsx";
 import AdminSHows from "./components/AllShowsAdmin.jsx";

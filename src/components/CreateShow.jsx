@@ -9,7 +9,6 @@ function CreateShow(props) {
     const onChange = (evt) => {
         setShow({...show, [evt.target.id]: evt.target.value})
         setDate(evt.date)
-        console.log(show)
 
     }
 
@@ -25,7 +24,7 @@ function CreateShow(props) {
 
             <div className="input-group mb-3">
                 <div className="input-group-prepend">
-                    <span className="input-group-text" id="basic-addon1">Name</span>
+                    <span className="input-group-text" >Name</span>
                 </div>
                 <input type="text" id="name" className="form-control" aria-label="Name"
                        onChange={onChange}
@@ -34,7 +33,7 @@ function CreateShow(props) {
 
             <div className="input-group mb-3">
                 <div className="input-group-prepend">
-                    <span className="input-group-text" id="basic-addon1">Location</span>
+                    <span className="input-group-text" >Location</span>
                 </div>
                 <input type="text" id="location" className="form-control" aria-label="Name"
                        onChange={onChange}
@@ -43,7 +42,7 @@ function CreateShow(props) {
 
             <div className="input-group mb-3">
                 <div className="input-group-prepend">
-                    <span className="input-group-text" id="basic-addon1">Date and time</span>
+                    <span className="input-group-text" >Date and time</span>
                 </div>
                 <input onChange={onChange} type="datetime-local" id="startDateAndTime"
                        name="date" value={date}
@@ -52,11 +51,14 @@ function CreateShow(props) {
 
             <div className="input-group mb-3">
                 <div className="input-group-prepend">
-                    <span className="input-group-text" id="basic-addon1">Duration</span>
+                    <span className="input-group-text" >Duration</span>
                 </div>
                 <input type="number" id="duration" className="form-control" aria-label="Name"
                        onChange={onChange}
                        aria-describedby="basic-addon1"/>
+                <div className="input-group-append">
+                    <span className="input-group-text" >Hours</span>
+                </div>
             </div>
 
             <button onClick={submit} type= "button" className="btn btn-primary"> Submit </button>

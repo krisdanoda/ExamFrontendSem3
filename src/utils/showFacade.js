@@ -1,6 +1,6 @@
 import apiFacade from "./apiFacade.js";
 
-const URL = "http://localhost:8080";
+const URL = apiFacade.URL;
 
 function showFacadeAPI() {
 

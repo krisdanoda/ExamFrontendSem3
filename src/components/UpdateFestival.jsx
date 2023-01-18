@@ -18,14 +18,11 @@ function UpdateFestival(props) {
 
     const onselect = (evt) => {
         const key = evt.target.value
-        console.log(key)
         setCurrentFestival(festivals.find((festival) => festival.id == key) )
-        console.log(currentFestival)
     }
 
     const onChange = (evt) => {
         setCurrentFestival({...currentFestival, [evt.target.id]: evt.target.value})
-        console.log(currentFestival)
     }
 
     const submit = () => {
@@ -77,6 +74,9 @@ function UpdateFestival(props) {
                 <input type="text" id="duration" className="form-control" aria-label="Name"
                        onChange={onChange} value={currentFestival.duration}
                        aria-describedby="basic-addon1"/>
+                <div className="input-group-append">
+                    <span className="input-group-text" >Days</span>
+                </div>
             </div>
 
             <button  onClick={submit} type= "button" className="btn btn-primary"> Submit </button>

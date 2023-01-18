@@ -17,14 +17,13 @@ function UpdateShow(props) {
 
     const onselect = (evt) => {
         const key = evt.target.value
-        console.log(key)
         setCurrentShow(shows.find((Show) => Show.id == key) )
-        console.log(currentShow)
+
     }
 
     const onChange = (evt) => {
         setCurrentShow({...currentShow, [evt.target.id]: evt.target.value})
-        console.log(currentShow)
+
     }
 
     const submit = () => {
@@ -77,6 +76,9 @@ function UpdateShow(props) {
                 <input type="number" id="duration" className="form-control" aria-label="Name"
                        onChange={onChange} value={currentShow.duration}
                        aria-describedby="basic-addon1"/>
+                <div className="input-group-append">
+                    <span className="input-group-text" >Hours</span>
+                </div>
             </div>
 
             <button onClick={submit} type= "button" className="btn btn-primary"> Submit </button>
